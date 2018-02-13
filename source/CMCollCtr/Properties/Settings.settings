@@ -1,0 +1,77 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CMHealthMon.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PingDelay" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">40</Value>
+    </Setting>
+    <Setting Name="HealthCheckDelay" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="MaxPingThreads" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">35</Value>
+    </Setting>
+    <Setting Name="MaxHealthThreads" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="Username" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PingTimeout" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1500</Value>
+    </Setting>
+    <Setting Name="AutoHealthCheck" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AutoPing" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="FQDN" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="WinRMSSL" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="WinRMPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5985</Value>
+    </Setting>
+    <Setting Name="ConsoleExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">
+          &lt;ActionDescription Class="Executable" SelectionMode="Both" DisplayName="CMCollCtr" MnemonicDisplayName="Collection Commander" Description="Collection Commander for CM12"&gt;
+          &lt;ShowOn&gt;
+          &lt;string&gt;ContextMenu&lt;/string&gt;
+          &lt;/ShowOn&gt;
+          &lt;ResourceAssembly&gt;
+          &lt;Assembly&gt;{0}&lt;/Assembly&gt;
+          &lt;Type&gt;CMHealthMon.Properties.Resources.resources&lt;/Type&gt;
+          &lt;/ResourceAssembly&gt;
+          &lt;ImagesDescription&gt;
+          &lt;ResourceAssembly&gt;
+          &lt;Assembly&gt;{0}&lt;/Assembly&gt;
+          &lt;Type&gt;CMHealthMon.Properties.Resources.resources&lt;/Type&gt;
+          &lt;/ResourceAssembly&gt;
+          &lt;ImageResourceName&gt;Heartbeat&lt;/ImageResourceName&gt;
+          &lt;/ImagesDescription&gt;
+          &lt;Executable&gt;
+          &lt;FilePath&gt;{0}&lt;/FilePath&gt;
+          &lt;Parameters&gt;/Name:"##SUB:Name##" /Path:##SUB:__PATH##&lt;/Parameters&gt;
+          &lt;/Executable&gt;
+          &lt;/ActionDescription&gt;
+        </Value>
+    </Setting>
+    <Setting Name="PasswordManager" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfPWList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+&lt;PWList&gt;
+&lt;Domain&gt;localhost&lt;/Domain&gt;
+&lt;/PWList&gt;
+&lt;PWList&gt;
+&lt;Domain&gt;127.0.0.1&lt;/Domain&gt;
+&lt;/PWList&gt;
+&lt;/ArrayOfPWList&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

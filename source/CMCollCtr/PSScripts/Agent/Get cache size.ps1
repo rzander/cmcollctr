@@ -1,0 +1,1 @@
+ "Cache(MB):" + ([wmi]"ROOT\ccm\SoftMgmtAgent:CacheConfig.ConfigKey='Cache'").Size

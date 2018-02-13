@@ -1,0 +1,1 @@
+"CM Agent: " + (Get-Service 'ccmexec').status

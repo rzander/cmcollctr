@@ -1,0 +1,1 @@
+ "SLP:" + (Get-ItemProperty("HKLM:\SOFTWARE\Microsoft\CCM")).$("SMSSLP")

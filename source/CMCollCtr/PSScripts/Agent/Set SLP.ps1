@@ -1,0 +1,1 @@
+ New-ItemProperty -path "HKLM:\SOFTWARE\Microsoft\CCM" -name "SMSSLP" -PropertyType String -Force -value mySLP.domain.dns

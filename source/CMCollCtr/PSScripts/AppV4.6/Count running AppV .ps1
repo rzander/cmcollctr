@@ -1,0 +1,1 @@
+"Running AppV: " + (get-wmiobject -query "SELECT * FROM Package WHERE InUse='True'" -namespace "root\Microsoft\appvirt\client").Count

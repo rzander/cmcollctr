@@ -1,0 +1,1 @@
+$objSearcher = (New-Object -ComObject Microsoft.Update.Session).CreateUpdateSearcher();$objResults = $objSearcher.Search('IsHidden=0 and IsInstalled=0');$objResults.Updates[0]

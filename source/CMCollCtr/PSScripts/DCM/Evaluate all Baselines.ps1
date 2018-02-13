@@ -1,0 +1,1 @@
+get-wmiobject -query "SELECT * FROM SMS_DesiredConfiguration" -namespace "ROOT\ccm\dcm" | % { ([wmiclass]'ROOT\ccm\dcm:SMS_DesiredConfiguration').TriggerEvaluation($_.Name, $_.Version, $True , $True)} | Out-Null; "Baseline evaluation started"

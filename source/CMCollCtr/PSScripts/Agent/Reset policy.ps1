@@ -1,0 +1,1 @@
+([wmiclass]'ROOT\ccm:SMS_Client').ResetPolicy(1);"Policy reset triggered"

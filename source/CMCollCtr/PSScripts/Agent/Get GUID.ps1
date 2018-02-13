@@ -1,0 +1,1 @@
+([wmi]"ROOT\ccm:CCM_Client=@").ClientId

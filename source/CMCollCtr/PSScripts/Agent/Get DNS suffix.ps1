@@ -1,0 +1,1 @@
+"DNS Suffix:" + (Get-ItemProperty("HKLM:\SOFTWARE\Microsoft\CCM\LocationServices")).$("DnsSuffix")

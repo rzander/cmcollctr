@@ -1,0 +1,1 @@
+Stop-Service 'ccmexec'; 'CCMEXEC: ' + (Get-Service 'ccmexec').Status

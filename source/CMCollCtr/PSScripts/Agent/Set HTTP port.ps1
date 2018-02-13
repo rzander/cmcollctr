@@ -1,0 +1,1 @@
+New-ItemProperty -path "HKLM:\SOFTWARE\Microsoft\CCM" -name "HttpPort" -Type DWORD -force -value 80
