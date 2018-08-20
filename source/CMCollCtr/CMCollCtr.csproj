@@ -98,8 +98,8 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Windows.Forms.Ribbon35">
-      <HintPath>..\System.Windows.Forms.Ribbon35.dll</HintPath>
+    <Reference Include="System.Windows.Forms.Ribbon35, Version=3.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Forms.Ribbon35.3.5.8.0\lib\net35\System.Windows.Forms.Ribbon35.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
@@ -143,6 +143,7 @@
     <None Include="App.Config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
     <None Include="plugin.collctr.localpsscripts.dll.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -388,6 +389,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Heartbeat.ico" />
+    <Content Include="Updates.txt" />
     <None Include="Resources\Folder_16.png" />
     <None Include="Resources\Icon16.ico" />
     <None Include="Resources\Radar_48.png" />
