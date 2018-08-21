@@ -321,6 +321,7 @@
     <None Include="PSScripts\OS\Restart enforced.ps1">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="PSScripts\OS\Used disk space.ps1" />
     <None Include="PSScripts\SCOM\Get SCOM Agent version.ps1">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
