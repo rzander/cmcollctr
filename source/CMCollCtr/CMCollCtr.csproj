@@ -416,10 +416,6 @@
       <Project>{7e6aece4-7cc9-4131-aa50-86b161b10e4c}</Project>
       <Name>plugin.collctr.psscripts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\plugin.collctr.RebootRunbook\plugin.collctr.RebootRunbook.csproj">
-      <Project>{64df7492-4e36-4918-b6fe-12d2a4f0edea}</Project>
-      <Name>plugin.collctr.RebootRunbook</Name>
-    </ProjectReference>
     <ProjectReference Include="..\plugin.collctr.ruckzuck\plugin.collctr.ruckzuck.csproj">
       <Project>{36b8773c-cfa6-4ba9-a8cb-edb87c4dd055}</Project>
       <Name>plugin.collctr.ruckzuck</Name>
