@@ -5,16 +5,80 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMCollCtr", "CMCollCtr.csproj", "{CF3ADB1C-CB97-456D-B648-8A48E468EE55}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "plugin.collctr.cm12", "..\plugin.collctr.cm12\plugin.collctr.cm12.csproj", "{0B385FBB-8137-4ED0-9F29-1DD2584D455C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "plugin.collctr.EnableWinRM", "..\plugin.collctr.EnableWinRM\plugin.collctr.EnableWinRM.csproj", "{572EB8F6-F02B-4E5A-9582-6027030B4CD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "plugin.collctr.localpsscripts", "..\plugin.collctr.localpsscripts\plugin.collctr.localpsscripts.csproj", "{4D5E32DD-3F0E-4986-ACC0-712F63F5D8A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "plugin.collctr.psscripts", "..\plugin.collctr.psscripts\plugin.collctr.psscripts.csproj", "{7E6AECE4-7CC9-4131-AA50-86B161B10E4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "plugin.collctr.ruckzuck", "..\plugin.collctr.ruckzuck\plugin.collctr.ruckzuck.csproj", "{36B8773C-CFA6-4BA9-A8CB-EDB87C4DD055}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "plugin.collctr.sccmclictr", "..\plugin.collctr.sccmclictr\plugin.collctr.sccmclictr.csproj", "{AF62A452-B1BC-4669-B940-839E8BBFC905}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF3ADB1C-CB97-456D-B648-8A48E468EE55}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{CF3ADB1C-CB97-456D-B648-8A48E468EE55}.Debug|x86.ActiveCfg = Debug|x86
 		{CF3ADB1C-CB97-456D-B648-8A48E468EE55}.Debug|x86.Build.0 = Debug|x86
+		{CF3ADB1C-CB97-456D-B648-8A48E468EE55}.Release|Any CPU.ActiveCfg = Release|x86
 		{CF3ADB1C-CB97-456D-B648-8A48E468EE55}.Release|x86.ActiveCfg = Release|x86
 		{CF3ADB1C-CB97-456D-B648-8A48E468EE55}.Release|x86.Build.0 = Release|x86
+		{0B385FBB-8137-4ED0-9F29-1DD2584D455C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B385FBB-8137-4ED0-9F29-1DD2584D455C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B385FBB-8137-4ED0-9F29-1DD2584D455C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0B385FBB-8137-4ED0-9F29-1DD2584D455C}.Debug|x86.Build.0 = Debug|Any CPU
+		{0B385FBB-8137-4ED0-9F29-1DD2584D455C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B385FBB-8137-4ED0-9F29-1DD2584D455C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B385FBB-8137-4ED0-9F29-1DD2584D455C}.Release|x86.ActiveCfg = Release|Any CPU
+		{0B385FBB-8137-4ED0-9F29-1DD2584D455C}.Release|x86.Build.0 = Release|Any CPU
+		{572EB8F6-F02B-4E5A-9582-6027030B4CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{572EB8F6-F02B-4E5A-9582-6027030B4CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{572EB8F6-F02B-4E5A-9582-6027030B4CD4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{572EB8F6-F02B-4E5A-9582-6027030B4CD4}.Debug|x86.Build.0 = Debug|Any CPU
+		{572EB8F6-F02B-4E5A-9582-6027030B4CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{572EB8F6-F02B-4E5A-9582-6027030B4CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{572EB8F6-F02B-4E5A-9582-6027030B4CD4}.Release|x86.ActiveCfg = Release|Any CPU
+		{572EB8F6-F02B-4E5A-9582-6027030B4CD4}.Release|x86.Build.0 = Release|Any CPU
+		{4D5E32DD-3F0E-4986-ACC0-712F63F5D8A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D5E32DD-3F0E-4986-ACC0-712F63F5D8A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D5E32DD-3F0E-4986-ACC0-712F63F5D8A1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4D5E32DD-3F0E-4986-ACC0-712F63F5D8A1}.Debug|x86.Build.0 = Debug|Any CPU
+		{4D5E32DD-3F0E-4986-ACC0-712F63F5D8A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D5E32DD-3F0E-4986-ACC0-712F63F5D8A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D5E32DD-3F0E-4986-ACC0-712F63F5D8A1}.Release|x86.ActiveCfg = Release|Any CPU
+		{4D5E32DD-3F0E-4986-ACC0-712F63F5D8A1}.Release|x86.Build.0 = Release|Any CPU
+		{7E6AECE4-7CC9-4131-AA50-86B161B10E4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E6AECE4-7CC9-4131-AA50-86B161B10E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E6AECE4-7CC9-4131-AA50-86B161B10E4C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7E6AECE4-7CC9-4131-AA50-86B161B10E4C}.Debug|x86.Build.0 = Debug|Any CPU
+		{7E6AECE4-7CC9-4131-AA50-86B161B10E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E6AECE4-7CC9-4131-AA50-86B161B10E4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E6AECE4-7CC9-4131-AA50-86B161B10E4C}.Release|x86.ActiveCfg = Release|Any CPU
+		{7E6AECE4-7CC9-4131-AA50-86B161B10E4C}.Release|x86.Build.0 = Release|Any CPU
+		{36B8773C-CFA6-4BA9-A8CB-EDB87C4DD055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B8773C-CFA6-4BA9-A8CB-EDB87C4DD055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B8773C-CFA6-4BA9-A8CB-EDB87C4DD055}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{36B8773C-CFA6-4BA9-A8CB-EDB87C4DD055}.Debug|x86.Build.0 = Debug|Any CPU
+		{36B8773C-CFA6-4BA9-A8CB-EDB87C4DD055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B8773C-CFA6-4BA9-A8CB-EDB87C4DD055}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B8773C-CFA6-4BA9-A8CB-EDB87C4DD055}.Release|x86.ActiveCfg = Release|Any CPU
+		{36B8773C-CFA6-4BA9-A8CB-EDB87C4DD055}.Release|x86.Build.0 = Release|Any CPU
+		{AF62A452-B1BC-4669-B940-839E8BBFC905}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF62A452-B1BC-4669-B940-839E8BBFC905}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF62A452-B1BC-4669-B940-839E8BBFC905}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AF62A452-B1BC-4669-B940-839E8BBFC905}.Debug|x86.Build.0 = Debug|Any CPU
+		{AF62A452-B1BC-4669-B940-839E8BBFC905}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF62A452-B1BC-4669-B940-839E8BBFC905}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF62A452-B1BC-4669-B940-839E8BBFC905}.Release|x86.ActiveCfg = Release|Any CPU
+		{AF62A452-B1BC-4669-B940-839E8BBFC905}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

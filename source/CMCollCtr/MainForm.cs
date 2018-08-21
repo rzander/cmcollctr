@@ -150,6 +150,8 @@ namespace CMHealthMon
 
             }
 
+
+
             HealthIcon.DisplayIndex = 0;
             HealthIcon.CellTemplate = new DataGridViewImageCellBlank(true);
             HealthIcon.DefaultCellStyle.NullValue = Properties.Resources.New;
@@ -164,59 +166,49 @@ namespace CMHealthMon
             LastRebootDiff.Width = 50;
             LastRebootDiff.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
 
-            HealthRebootIcon.DisplayIndex = 7;
+            try
+            {
+                HealthRebootIcon.DisplayIndex = 7;
+            }
+            catch { }
             HealthRebootIcon.CellTemplate = new DataGridViewImageCellBlank(true);
             HealthRebootIcon.DefaultCellStyle.NullValue = Properties.Resources.Option;
             HealthRebootIcon.Width = 48;
             HealthRebootIcon.HeaderText = "Reboot pending";
             HealthRebootIcon.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
 
-            HealthUpdateMissingIcon.DisplayIndex = 8;
+            try
+            {
+                HealthUpdateMissingIcon.DisplayIndex = 8;
+            }
+            catch { }
             HealthUpdateMissingIcon.CellTemplate = new DataGridViewImageCellBlank(true);
             HealthUpdateMissingIcon.DefaultCellStyle.NullValue = Properties.Resources.Option;
             HealthUpdateMissingIcon.Width = 48;
             HealthUpdateMissingIcon.HeaderText = "Updates missing";
             HealthUpdateMissingIcon.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
 
-            HealthInstallationRunningIcon.DisplayIndex = 9;
+            try
+            {
+                HealthInstallationRunningIcon.DisplayIndex = 9;
+            }
+            catch { }
             HealthInstallationRunningIcon.CellTemplate = new DataGridViewImageCellBlank(true);
             HealthInstallationRunningIcon.DefaultCellStyle.NullValue = Properties.Resources.Option;
             HealthInstallationRunningIcon.Width = 48;
             HealthInstallationRunningIcon.HeaderText = "Install running";
             HealthInstallationRunningIcon.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
 
-            UserLoggedOnIcon.DisplayIndex = 10;
+            try
+            {
+                UserLoggedOnIcon.DisplayIndex = 10;
+            }
+            catch { }
             UserLoggedOnIcon.CellTemplate = new DataGridViewImageCellBlank(true);
             UserLoggedOnIcon.DefaultCellStyle.NullValue = Properties.Resources.Option;
             UserLoggedOnIcon.Width = 48;
             UserLoggedOnIcon.HeaderText = "Users online";
             UserLoggedOnIcon.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-
-            dataGridView1.AutoSize = false;
-
-            errorDataGridViewTextBoxColumn.Visible = false;
-            lastRebootDataGridViewTextBoxColumn.Visible = false;
-            StatusMessage.DisplayIndex = 10;
-
-            OnlineStatus.Visible = false;
-
-            cbHealthCheck.Checked = Properties.Settings.Default.AutoHealthCheck;
-            cbPing.Checked = Properties.Settings.Default.AutoPing;
-
-            //Load Password List
-            try
-            {
-
-                BindingSource bs = new BindingSource();
-
-                XmlSerializer xmlSerializer = new XmlSerializer(typeof(BindingList<PasswordManager.PWList>));
-                StringReader textReader = new StringReader(Properties.Settings.Default.PasswordManager);
-                bs.DataSource = (BindingList<PasswordManager.PWList>)(xmlSerializer.Deserialize(textReader));
-
-                PWManagerList = bs.List.OfType<PasswordManager.PWList>().ToList();
-            }
-            catch { }
-
 
             //Load external Main-Menu Plugins...
             try
@@ -272,6 +264,37 @@ namespace CMHealthMon
 
             }
             catch { }
+
+            dataGridView1.AutoSize = false;
+
+            try
+            {
+                errorDataGridViewTextBoxColumn.Visible = false;
+                lastRebootDataGridViewTextBoxColumn.Visible = false;
+                StatusMessage.DisplayIndex = 10;
+                OnlineStatus.Visible = false;
+            }
+            catch { }
+
+            cbHealthCheck.Checked = Properties.Settings.Default.AutoHealthCheck;
+            cbPing.Checked = Properties.Settings.Default.AutoPing;
+
+            //Load Password List
+            try
+            {
+
+                BindingSource bs = new BindingSource();
+
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(BindingList<PasswordManager.PWList>));
+                StringReader textReader = new StringReader(Properties.Settings.Default.PasswordManager);
+                bs.DataSource = (BindingList<PasswordManager.PWList>)(xmlSerializer.Deserialize(textReader));
+
+                PWManagerList = bs.List.OfType<PasswordManager.PWList>().ToList();
+            }
+            catch { }
+
+
+
 
 
         }

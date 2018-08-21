@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Roger Zander")]
 [assembly: AssemblyProduct("CMCollCtr")]
-[assembly: AssemblyCopyright("Copyright © 2017 by Roger Zander")]
+[assembly: AssemblyCopyright("Copyright © 2018 by Roger Zander")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

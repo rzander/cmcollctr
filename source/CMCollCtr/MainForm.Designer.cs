@@ -29,17 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.computerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iPAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SiteCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserLoggedOnIcon = new System.Windows.Forms.DataGridViewImageColumn();
+            this.AgentVersion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastRebootDiff = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusMessage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OnlineStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorMessageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OnlineTimeStamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.healthTimeStampDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorTimeStampDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastRebootDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HealthRebootIcon = new System.Windows.Forms.DataGridViewImageColumn();
+            this.HealthUpdateMissingIcon = new System.Windows.Forms.DataGridViewImageColumn();
+            this.HealthInstallationRunningIcon = new System.Windows.Forms.DataGridViewImageColumn();
+            this.HealthIcon = new System.Windows.Forms.DataGridViewImageColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.computerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tPing = new System.Windows.Forms.Timer(this.components);
             this.tHealthCheck = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -105,30 +122,13 @@
             this.ribbonTextBox1 = new System.Windows.Forms.RibbonTextBox();
             this.ribbonTextBox2 = new System.Windows.Forms.RibbonTextBox();
             this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
-            this.computerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iPAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SiteCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserLoggedOnIcon = new System.Windows.Forms.DataGridViewImageColumn();
-            this.AgentVersion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OnlineStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.errorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.errorMessageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OnlineTimeStamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.healthTimeStampDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.errorTimeStampDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastRebootDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HealthRebootIcon = new System.Windows.Forms.DataGridViewImageColumn();
-            this.HealthUpdateMissingIcon = new System.Windows.Forms.DataGridViewImageColumn();
-            this.HealthInstallationRunningIcon = new System.Windows.Forms.DataGridViewImageColumn();
-            this.HealthIcon = new System.Windows.Forms.DataGridViewImageColumn();
-            this.computerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.computerBindingSource)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -175,6 +175,45 @@
             this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
             // 
+            // computerNameDataGridViewTextBoxColumn
+            // 
+            this.computerNameDataGridViewTextBoxColumn.DataPropertyName = "ComputerName";
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.computerNameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.computerNameDataGridViewTextBoxColumn.HeaderText = "ComputerName";
+            this.computerNameDataGridViewTextBoxColumn.Name = "computerNameDataGridViewTextBoxColumn";
+            // 
+            // iPAddressDataGridViewTextBoxColumn
+            // 
+            this.iPAddressDataGridViewTextBoxColumn.DataPropertyName = "IPAddress";
+            this.iPAddressDataGridViewTextBoxColumn.HeaderText = "IPAddress";
+            this.iPAddressDataGridViewTextBoxColumn.Name = "iPAddressDataGridViewTextBoxColumn";
+            this.iPAddressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // SiteCode
+            // 
+            this.SiteCode.DataPropertyName = "SiteCode";
+            this.SiteCode.HeaderText = "SiteCode";
+            this.SiteCode.Name = "SiteCode";
+            this.SiteCode.ReadOnly = true;
+            this.SiteCode.Visible = false;
+            this.SiteCode.Width = 54;
+            // 
+            // UserLoggedOnIcon
+            // 
+            this.UserLoggedOnIcon.DataPropertyName = "UsersLoggedOnIcon";
+            this.UserLoggedOnIcon.HeaderText = "Users LoggedOn ";
+            this.UserLoggedOnIcon.Name = "UserLoggedOnIcon";
+            this.UserLoggedOnIcon.ReadOnly = true;
+            // 
+            // AgentVersion
+            // 
+            this.AgentVersion.DataPropertyName = "AgentVersion";
+            this.AgentVersion.HeaderText = "AgentVersion";
+            this.AgentVersion.Name = "AgentVersion";
+            this.AgentVersion.ReadOnly = true;
+            this.AgentVersion.Visible = false;
+            // 
             // LastRebootDiff
             // 
             this.LastRebootDiff.DataPropertyName = "LastRebootDiff";
@@ -194,10 +233,108 @@
             this.StatusMessage.ToolTipText = "result of the Powershell commands";
             this.StatusMessage.Width = 250;
             // 
+            // OnlineStatus
+            // 
+            this.OnlineStatus.DataPropertyName = "OnlineStatus";
+            this.OnlineStatus.HeaderText = "OnlineStatus";
+            this.OnlineStatus.Name = "OnlineStatus";
+            this.OnlineStatus.ReadOnly = true;
+            this.OnlineStatus.Width = 16;
+            // 
+            // errorDataGridViewTextBoxColumn
+            // 
+            this.errorDataGridViewTextBoxColumn.DataPropertyName = "Error";
+            this.errorDataGridViewTextBoxColumn.HeaderText = "Error";
+            this.errorDataGridViewTextBoxColumn.Name = "errorDataGridViewTextBoxColumn";
+            this.errorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.errorDataGridViewTextBoxColumn.Width = 16;
+            // 
+            // errorMessageDataGridViewTextBoxColumn
+            // 
+            this.errorMessageDataGridViewTextBoxColumn.DataPropertyName = "ErrorMessage";
+            this.errorMessageDataGridViewTextBoxColumn.HeaderText = "ErrorMessage";
+            this.errorMessageDataGridViewTextBoxColumn.Name = "errorMessageDataGridViewTextBoxColumn";
+            this.errorMessageDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // OnlineTimeStamp
+            // 
+            this.OnlineTimeStamp.DataPropertyName = "OnlineTimeStamp";
+            dataGridViewCellStyle3.Format = "T";
+            dataGridViewCellStyle3.NullValue = null;
+            this.OnlineTimeStamp.DefaultCellStyle = dataGridViewCellStyle3;
+            this.OnlineTimeStamp.HeaderText = "OnlineTimeStamp";
+            this.OnlineTimeStamp.Name = "OnlineTimeStamp";
+            this.OnlineTimeStamp.ReadOnly = true;
+            // 
+            // healthTimeStampDataGridViewTextBoxColumn
+            // 
+            this.healthTimeStampDataGridViewTextBoxColumn.DataPropertyName = "HealthTimeStamp";
+            dataGridViewCellStyle4.Format = "T";
+            dataGridViewCellStyle4.NullValue = null;
+            this.healthTimeStampDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.healthTimeStampDataGridViewTextBoxColumn.HeaderText = "HealthTimeStamp";
+            this.healthTimeStampDataGridViewTextBoxColumn.Name = "healthTimeStampDataGridViewTextBoxColumn";
+            this.healthTimeStampDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // errorTimeStampDataGridViewTextBoxColumn
+            // 
+            this.errorTimeStampDataGridViewTextBoxColumn.DataPropertyName = "ErrorTimeStamp";
+            dataGridViewCellStyle5.Format = "T";
+            this.errorTimeStampDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.errorTimeStampDataGridViewTextBoxColumn.HeaderText = "ErrorTimeStamp";
+            this.errorTimeStampDataGridViewTextBoxColumn.Name = "errorTimeStampDataGridViewTextBoxColumn";
+            this.errorTimeStampDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lastRebootDataGridViewTextBoxColumn
+            // 
+            this.lastRebootDataGridViewTextBoxColumn.DataPropertyName = "LastReboot";
+            this.lastRebootDataGridViewTextBoxColumn.HeaderText = "LastReboot";
+            this.lastRebootDataGridViewTextBoxColumn.Name = "lastRebootDataGridViewTextBoxColumn";
+            this.lastRebootDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // HealthRebootIcon
+            // 
+            this.HealthRebootIcon.DataPropertyName = "HealthRebootIcon";
+            this.HealthRebootIcon.HeaderText = "HealthRebootIcon";
+            this.HealthRebootIcon.Name = "HealthRebootIcon";
+            this.HealthRebootIcon.ReadOnly = true;
+            this.HealthRebootIcon.Width = 32;
+            // 
+            // HealthUpdateMissingIcon
+            // 
+            this.HealthUpdateMissingIcon.DataPropertyName = "HealthUpdateMissingIcon";
+            this.HealthUpdateMissingIcon.HeaderText = "HealthUpdateMissingIcon";
+            this.HealthUpdateMissingIcon.Name = "HealthUpdateMissingIcon";
+            this.HealthUpdateMissingIcon.ReadOnly = true;
+            this.HealthUpdateMissingIcon.Visible = false;
+            this.HealthUpdateMissingIcon.Width = 32;
+            // 
+            // HealthInstallationRunningIcon
+            // 
+            this.HealthInstallationRunningIcon.DataPropertyName = "HealthInstallationRunningIcon";
+            this.HealthInstallationRunningIcon.HeaderText = "HealthInstallationRunningIcon";
+            this.HealthInstallationRunningIcon.Name = "HealthInstallationRunningIcon";
+            this.HealthInstallationRunningIcon.ReadOnly = true;
+            this.HealthInstallationRunningIcon.Visible = false;
+            this.HealthInstallationRunningIcon.Width = 32;
+            // 
+            // HealthIcon
+            // 
+            this.HealthIcon.DataPropertyName = "HealthIcon";
+            this.HealthIcon.HeaderText = "Icon";
+            this.HealthIcon.Name = "HealthIcon";
+            this.HealthIcon.ReadOnly = true;
+            this.HealthIcon.Width = 32;
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // computerBindingSource
+            // 
+            this.computerBindingSource.DataSource = typeof(CMHealthMon.Computer);
+            this.computerBindingSource.ListChanged += new System.ComponentModel.ListChangedEventHandler(this.computerBindingSource_ListChanged);
             // 
             // tPing
             // 
@@ -281,9 +418,9 @@
             // 
             this.tslCopyRight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tslCopyRight.Name = "tslCopyRight";
-            this.tslCopyRight.Size = new System.Drawing.Size(915, 17);
+            this.tslCopyRight.Size = new System.Drawing.Size(884, 17);
             this.tslCopyRight.Spring = true;
-            this.tslCopyRight.Text = "Copyright (c) 2016 by Roger Zander";
+            this.tslCopyRight.Text = "Copyright (c) 2018 by Roger Zander";
             this.tslCopyRight.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.tslCopyRight.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
@@ -336,6 +473,7 @@
             this.ribbon1.OrbDropDown.Size = new System.Drawing.Size(527, 447);
             this.ribbon1.OrbDropDown.TabIndex = 0;
             this.ribbon1.OrbImage = null;
+            this.ribbon1.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
             this.ribbon1.Size = new System.Drawing.Size(1184, 139);
             this.ribbon1.TabIndex = 12;
             this.ribbon1.Tabs.Add(this.ribbonTab2);
@@ -343,6 +481,7 @@
             this.ribbon1.Tabs.Add(this.ribbonTab4);
             this.ribbon1.TabsMargin = new System.Windows.Forms.Padding(12, 2, 20, 0);
             this.ribbon1.Text = "ribbon1";
+            this.ribbon1.ThemeColor = System.Windows.Forms.RibbonTheme.Blue;
             // 
             // ribbonTab2
             // 
@@ -637,143 +776,6 @@
             this.ribbonButton5.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.Image")));
             this.ribbonButton5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.SmallImage")));
             // 
-            // computerNameDataGridViewTextBoxColumn
-            // 
-            this.computerNameDataGridViewTextBoxColumn.DataPropertyName = "ComputerName";
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.computerNameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.computerNameDataGridViewTextBoxColumn.HeaderText = "ComputerName";
-            this.computerNameDataGridViewTextBoxColumn.Name = "computerNameDataGridViewTextBoxColumn";
-            // 
-            // iPAddressDataGridViewTextBoxColumn
-            // 
-            this.iPAddressDataGridViewTextBoxColumn.DataPropertyName = "IPAddress";
-            this.iPAddressDataGridViewTextBoxColumn.HeaderText = "IPAddress";
-            this.iPAddressDataGridViewTextBoxColumn.Name = "iPAddressDataGridViewTextBoxColumn";
-            this.iPAddressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // SiteCode
-            // 
-            this.SiteCode.DataPropertyName = "SiteCode";
-            this.SiteCode.HeaderText = "SiteCode";
-            this.SiteCode.Name = "SiteCode";
-            this.SiteCode.ReadOnly = true;
-            this.SiteCode.Visible = false;
-            this.SiteCode.Width = 54;
-            // 
-            // UserLoggedOnIcon
-            // 
-            this.UserLoggedOnIcon.DataPropertyName = "UsersLoggedOnIcon";
-            this.UserLoggedOnIcon.HeaderText = "Users LoggedOn ";
-            this.UserLoggedOnIcon.Name = "UserLoggedOnIcon";
-            this.UserLoggedOnIcon.ReadOnly = true;
-            // 
-            // AgentVersion
-            // 
-            this.AgentVersion.DataPropertyName = "AgentVersion";
-            this.AgentVersion.HeaderText = "AgentVersion";
-            this.AgentVersion.Name = "AgentVersion";
-            this.AgentVersion.ReadOnly = true;
-            this.AgentVersion.Visible = false;
-            // 
-            // OnlineStatus
-            // 
-            this.OnlineStatus.DataPropertyName = "OnlineStatus";
-            this.OnlineStatus.HeaderText = "OnlineStatus";
-            this.OnlineStatus.Name = "OnlineStatus";
-            this.OnlineStatus.ReadOnly = true;
-            this.OnlineStatus.Width = 16;
-            // 
-            // errorDataGridViewTextBoxColumn
-            // 
-            this.errorDataGridViewTextBoxColumn.DataPropertyName = "Error";
-            this.errorDataGridViewTextBoxColumn.HeaderText = "Error";
-            this.errorDataGridViewTextBoxColumn.Name = "errorDataGridViewTextBoxColumn";
-            this.errorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.errorDataGridViewTextBoxColumn.Width = 16;
-            // 
-            // errorMessageDataGridViewTextBoxColumn
-            // 
-            this.errorMessageDataGridViewTextBoxColumn.DataPropertyName = "ErrorMessage";
-            this.errorMessageDataGridViewTextBoxColumn.HeaderText = "ErrorMessage";
-            this.errorMessageDataGridViewTextBoxColumn.Name = "errorMessageDataGridViewTextBoxColumn";
-            this.errorMessageDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // OnlineTimeStamp
-            // 
-            this.OnlineTimeStamp.DataPropertyName = "OnlineTimeStamp";
-            dataGridViewCellStyle3.Format = "T";
-            dataGridViewCellStyle3.NullValue = null;
-            this.OnlineTimeStamp.DefaultCellStyle = dataGridViewCellStyle3;
-            this.OnlineTimeStamp.HeaderText = "OnlineTimeStamp";
-            this.OnlineTimeStamp.Name = "OnlineTimeStamp";
-            this.OnlineTimeStamp.ReadOnly = true;
-            // 
-            // healthTimeStampDataGridViewTextBoxColumn
-            // 
-            this.healthTimeStampDataGridViewTextBoxColumn.DataPropertyName = "HealthTimeStamp";
-            dataGridViewCellStyle4.Format = "T";
-            dataGridViewCellStyle4.NullValue = null;
-            this.healthTimeStampDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.healthTimeStampDataGridViewTextBoxColumn.HeaderText = "HealthTimeStamp";
-            this.healthTimeStampDataGridViewTextBoxColumn.Name = "healthTimeStampDataGridViewTextBoxColumn";
-            this.healthTimeStampDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // errorTimeStampDataGridViewTextBoxColumn
-            // 
-            this.errorTimeStampDataGridViewTextBoxColumn.DataPropertyName = "ErrorTimeStamp";
-            dataGridViewCellStyle5.Format = "T";
-            this.errorTimeStampDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.errorTimeStampDataGridViewTextBoxColumn.HeaderText = "ErrorTimeStamp";
-            this.errorTimeStampDataGridViewTextBoxColumn.Name = "errorTimeStampDataGridViewTextBoxColumn";
-            this.errorTimeStampDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lastRebootDataGridViewTextBoxColumn
-            // 
-            this.lastRebootDataGridViewTextBoxColumn.DataPropertyName = "LastReboot";
-            this.lastRebootDataGridViewTextBoxColumn.HeaderText = "LastReboot";
-            this.lastRebootDataGridViewTextBoxColumn.Name = "lastRebootDataGridViewTextBoxColumn";
-            this.lastRebootDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // HealthRebootIcon
-            // 
-            this.HealthRebootIcon.DataPropertyName = "HealthRebootIcon";
-            this.HealthRebootIcon.HeaderText = "HealthRebootIcon";
-            this.HealthRebootIcon.Name = "HealthRebootIcon";
-            this.HealthRebootIcon.ReadOnly = true;
-            this.HealthRebootIcon.Width = 32;
-            // 
-            // HealthUpdateMissingIcon
-            // 
-            this.HealthUpdateMissingIcon.DataPropertyName = "HealthUpdateMissingIcon";
-            this.HealthUpdateMissingIcon.HeaderText = "HealthUpdateMissingIcon";
-            this.HealthUpdateMissingIcon.Name = "HealthUpdateMissingIcon";
-            this.HealthUpdateMissingIcon.ReadOnly = true;
-            this.HealthUpdateMissingIcon.Visible = false;
-            this.HealthUpdateMissingIcon.Width = 32;
-            // 
-            // HealthInstallationRunningIcon
-            // 
-            this.HealthInstallationRunningIcon.DataPropertyName = "HealthInstallationRunningIcon";
-            this.HealthInstallationRunningIcon.HeaderText = "HealthInstallationRunningIcon";
-            this.HealthInstallationRunningIcon.Name = "HealthInstallationRunningIcon";
-            this.HealthInstallationRunningIcon.ReadOnly = true;
-            this.HealthInstallationRunningIcon.Visible = false;
-            this.HealthInstallationRunningIcon.Width = 32;
-            // 
-            // HealthIcon
-            // 
-            this.HealthIcon.DataPropertyName = "HealthIcon";
-            this.HealthIcon.HeaderText = "Icon";
-            this.HealthIcon.Name = "HealthIcon";
-            this.HealthIcon.ReadOnly = true;
-            this.HealthIcon.Width = 32;
-            // 
-            // computerBindingSource
-            // 
-            this.computerBindingSource.DataSource = typeof(CMHealthMon.Computer);
-            this.computerBindingSource.ListChanged += new System.ComponentModel.ListChangedEventHandler(this.computerBindingSource_ListChanged);
-            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -827,9 +829,9 @@
             this.Text = "Collection Commander";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computerBindingSource)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.computerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -937,4 +939,3 @@
         private System.Windows.Forms.DataGridViewImageColumn HealthIcon;
     }
 }
-
