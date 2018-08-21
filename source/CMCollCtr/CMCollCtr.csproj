@@ -419,6 +419,7 @@
     <ProjectReference Include="..\plugin.collctr.ruckzuck\plugin.collctr.ruckzuck.csproj">
       <Project>{36b8773c-cfa6-4ba9-a8cb-edb87c4dd055}</Project>
       <Name>plugin.collctr.ruckzuck</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\plugin.collctr.sccmclictr\plugin.collctr.sccmclictr.csproj">
       <Project>{af62a452-b1bc-4669-b940-839e8bbfc905}</Project>

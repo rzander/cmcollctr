@@ -418,7 +418,7 @@
             // 
             this.tslCopyRight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tslCopyRight.Name = "tslCopyRight";
-            this.tslCopyRight.Size = new System.Drawing.Size(884, 17);
+            this.tslCopyRight.Size = new System.Drawing.Size(915, 17);
             this.tslCopyRight.Spring = true;
             this.tslCopyRight.Text = "Copyright (c) 2018 by Roger Zander";
             this.tslCopyRight.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -722,13 +722,13 @@
             this.ribbonButton4.DrawIconsBar = false;
             this.ribbonButton4.Image = global::CMHealthMon.Properties.Resources.opensource_logo_small2;
             this.ribbonButton4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.SmallImage")));
-            this.ribbonButton4.Text = "Project Page: https://cmcollctr.codeplex.com/";
+            this.ribbonButton4.Text = "Project Page: https://github.com/rzander/cmcollctr";
             this.ribbonButton4.TextAlignment = System.Windows.Forms.RibbonItem.RibbonItemTextAlignment.Right;
             this.ribbonButton4.Click += new System.EventHandler(this.ribbonButton4_Click);
             // 
             // ribbonLabel1
             // 
-            this.ribbonLabel1.Text = "Collection Commander for Configuration Manager (c) 2016  by Roger Zander";
+            this.ribbonLabel1.Text = "Collection Commander for Configuration Manager (c) 2018  by Roger Zander";
             // 
             // ribbonPanel9
             // 

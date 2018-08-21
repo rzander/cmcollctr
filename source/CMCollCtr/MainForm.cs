@@ -1786,7 +1786,7 @@ namespace CMHealthMon
 
         private void ribbonButton4_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://cmcollctr.codeplex.com/");
+            System.Diagnostics.Process.Start("https://github.com/rzander/cmcollctr");
         }
 
         private void rtb_MaxPingThreads_TextBoxTextChanged(object sender, EventArgs e)
