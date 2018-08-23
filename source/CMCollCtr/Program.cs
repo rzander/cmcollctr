@@ -152,29 +152,19 @@ namespace CMHealthMon
                     Application.Run(pForm);
                 }
 
-                //Obsolete
-                /*
-                if (sArg.StartsWith("/PW:", true, System.Globalization.CultureInfo.CurrentCulture))
-                {
-                    string sPW = sArg.Remove(0, 4);
-
-                    Assembly asm = Assembly.GetExecutingAssembly();
-                    var attribs = (asm.GetCustomAttributes(typeof(GuidAttribute), true));
-                    var id = (attribs[0] as GuidAttribute).Value;
-                    string sCode = sccmclictr.automation.common.Encrypt(sPW, id.ToString());
-                    MessageBox.Show(sCode, "Password");
-                    Console.WriteLine(sCode);
-
-                    return;
-                }*/
-
                 if (sArg.StartsWith("/Path:", true, System.Globalization.CultureInfo.CurrentCulture))
                 {
                     string sPath = sArg.Remove(0, 6);
                     string sQuery = "SELECT * FROM SMS_R_SYSTEM WHERE ResourceID in (SELECT ResourceID FROM SMS_CM_RES_COLL_" + sPath.Split('=')[1] + ")";
                     string sScope = sPath.Split(':')[0];
-
-                    //MessageBox.Show(sArg);
+                    if(!string.IsNullOrEmpty(Properties.Settings.Default.ServerDNSSuffix))
+                    {
+                        try
+                        {
+                            sScope = sPath.Replace(sPath.Split('\\')[2], sPath.Split('\\')[2] + Properties.Settings.Default.ServerDNSSuffix);
+                        }
+                        catch { }
+                    }
 
                     MainForm pForm = new MainForm();
                     pForm.Text = sTitle;
