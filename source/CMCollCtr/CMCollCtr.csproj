@@ -240,6 +240,9 @@
     <None Include="PSScripts\Agent\Get cached content size.ps1">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="PSScripts\Agent\Get DeliveryOptimization GroupID.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="PSScripts\Agent\Get DNS suffix.ps1">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -259,6 +262,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="PSScripts\Agent\Get SLP.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PSScripts\Agent\Refresh BoundaryGroupCache.ps1">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="PSScripts\Agent\Reset policy.ps1">
