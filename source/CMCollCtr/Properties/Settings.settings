@@ -73,5 +73,8 @@
 &lt;/PWList&gt;
 &lt;/ArrayOfPWList&gt;</Value>
     </Setting>
+    <Setting Name="ServerDNSSuffix" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

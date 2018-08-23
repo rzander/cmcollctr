@@ -189,5 +189,14 @@ namespace CMHealthMon.Properties {
                 this["PasswordManager"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ServerDNSSuffix {
+            get {
+                return ((string)(this["ServerDNSSuffix"]));
+            }
+        }
     }
 }
