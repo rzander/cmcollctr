@@ -156,6 +156,7 @@ namespace CMHealthMon
                 {
                     string sPath = sArg.Remove(0, 6);
                     string sQuery = "SELECT * FROM SMS_R_SYSTEM WHERE ResourceID in (SELECT ResourceID FROM SMS_CM_RES_COLL_" + sPath.Split('=')[1] + ")";
+
                     string sScope = sPath.Split(':')[0];
                     if(!string.IsNullOrEmpty(Properties.Settings.Default.ServerDNSSuffix))
                     {
